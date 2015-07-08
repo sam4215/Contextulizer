@@ -1,0 +1,19 @@
+# Do >>> NOT <<< edit this file manually unless you know what you are doing!
+#
+#         YOU COULD BREAK THE ENTIRE PROGRAM!
+#         EDITING THIS FILE COULD OPEN VUNERABILITIES FOR HACKERS!
+#         YOU ARE NO LONGER ABLE TO RECIEVE SUPPORT WHEN YOU EDIT THIS FILE!
+#         YOU HAVE BEEN WARNED!
+extentions:
+    - exe
+    - doc
+    - txt
+    - pdf
+    - html
+    - htm
+    - ppt
+    - pptx
+    - docx
+    - xls
+    - xlsx
+
