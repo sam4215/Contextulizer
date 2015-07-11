@@ -62,6 +62,8 @@ public class Main {
              * @return The file's type
              *
              * <b>Experimental, therefore deprecated until further notice</b>
+             *
+             * <i>Dev note: wil be grabbed from YAML in src/main/yaml/fileListing.yml</i>
              */
             @Deprecated
             @Experimental
