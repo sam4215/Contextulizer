@@ -1,11 +1,12 @@
 package me.sam4215.contextulizer;
 
 import me.sam4215.contextulizer.annotation.Experimental;
+import me.sam4215.contextulizer.Interface;
+
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.*;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * THIS CODE MAY BE LICENSED AND/OR COPYRIGHTED BY EMULSION TECHNOLOGIES.
@@ -19,7 +20,17 @@ import java.util.Scanner;
  * Oh yeah, note to self. When I say FTE, I mean File Type Extension.
  */
 public class Main {
-    public static void main(String[] args) {
+    public static void main(File file, File dest) {
+        /**
+         * Gets the {@link me.sam4215.contextulizer.Sorter}
+         * class to call <code>sorter.sort(file, dest, success, failure</code>
+         */
+        Sorter sorter = new Sorter();
+        /**
+         * Gets the {@link me.sam4215.contextulizer.Interface}
+         * class to call <code>inter.init()</code>
+         */
+        Interface inter = new Interface();
         try {
             InputStream input = new FileInputStream("src/main/yaml/fileListing.yml");
             Yaml yaml = new Yaml();
@@ -27,7 +38,10 @@ public class Main {
         } catch (FileNotFoundException e) {
             System.out.println("Error: File fileListing.yml in src/main/yaml is missing. ");
         }
-        if(args[0].contains(".")) {
+        if(file.getName().equalsIgnoreCase("interface.txt")) {
+            inter.init();
+        }
+        if(file.getName().contains(".")) {
             /**
              * This list is the representation of the split file
              *
@@ -35,7 +49,7 @@ public class Main {
              *
              * @return splitFileName[0] gets fileName, splitFileName[1] gets fileTypeExt
              */
-            String[] splitFileName = args[0].split(".");
+            String[] splitFileName = file.getName().split(".");
             /**
              * Gets the file's File Type Extension
              *
@@ -53,7 +67,7 @@ public class Main {
              *
              * @return The absolute name of a file
              **/
-            String fullFileName = args[0];
+            String fullFileName = file.getName();
             /**
              * Gets the file's type by using its FTE.
              *
@@ -94,7 +108,7 @@ public class Main {
             } catch (IOException exe) {
                 exe.printStackTrace();
             }
-
+            sorter.sort(file, dest, "File sorted", "File couldn't be sorted");
         }
     }
 }
