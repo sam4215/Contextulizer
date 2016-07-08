@@ -20,7 +20,7 @@ import java.util.List;
  * Oh yeah, note to self. When I say FTE, I mean File Type Extension.
  */
 public class Main {
-    public static void main(File file, File dest) {
+    public static void main(String strFile, String strDest) {
         /**
          * Gets the {@link me.sam4215.contextulizer.Sorter}
          * class to call <code>sorter.sort(file, dest, success, failure</code>
@@ -31,6 +31,8 @@ public class Main {
          * class to call <code>inter.init()</code>
          */
         Interface inter = new Interface();
+        File file = new File(strFile);
+        File dest = new File(strDest);
         try {
             InputStream input = new FileInputStream("src/main/yaml/fileListing.yml");
             Yaml yaml = new Yaml();
