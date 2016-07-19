@@ -20,9 +20,9 @@ This feature was planned early on, and was a terrible idea. All plans for this h
 GitHub offers a nice Wiki feature, as development progresses a wiki will be put in. In so early development one is unnessesary.
 # Details
 Project Name: Contextulizer<br>
-Project Description: A file organizing tool.
-Project Author: sam4215
-Project Main: me.sam4215.contextulizer.Main
-Project Version: DEV-20160907
-Project Repository: github.com/sam4215/Contextulizer.git
-Project License: MIT License
+Project Description: A file organizing tool.<br>
+Project Author: sam4215<br>
+Project Main: me.sam4215.contextulizer.Main<br>
+Project Version: DEV-20160907<br>
+Project Repository: github.com/sam4215/Contextulizer.git<br>
+Project License: MIT License<br>
